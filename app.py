@@ -7,7 +7,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def hello():
-    name = request.args['name']
+    name = request.args['victim']
     result_success = subprocess.check_output(
         [name], shell=True)
     return result_success
